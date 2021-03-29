@@ -3,14 +3,14 @@ $formName = null;
 $formSku = null;
 $formPrice = null;
 
-if ($searchResult) {
-    $formName = $searchResult["name"] ?? null;
-    $formSku = $searchResult["sku"] ?? null;
-    $formPrice = $searchResult["price"] ?? null;
+if ($this->searchResult) {
+    $formName = $this->searchResult["name"] ?? null;
+    $formSku = $this->searchResult["sku"] ?? null;
+    $formPrice = $this->searchResult["price"] ?? null;
 }
 
-if ($postSku && $name && $price) {
-    $formName = $name;
-    $formSku = $postSku;
-    $formPrice = $price;
+if ($this->action != "search") {
+    $formName = $this->name;
+    $formSku = $this->sku;
+    $formPrice = $this->price;
 };

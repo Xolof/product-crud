@@ -4,12 +4,14 @@
         private $token;
         private $baseURL;
 
-        public function __construct($token, $baseURL) {
+        public function __construct($token, $baseURL)
+        {
             $this->token = $token;
             $this->baseURL = $baseURL;
         }
 
-        private function curlGET($url) {
+        private function curlGET($url)
+        {
             $curl = curl_init($url);
 
             curl_setopt($curl, CURLOPT_HTTPHEADER, array(
@@ -30,7 +32,8 @@
             return json_decode($json, true);
         }
 
-        private function curlPOST($url, $body) {
+        private function curlPOST($url, $body)
+        {
             $curl = curl_init($url);
 
             curl_setopt($curl, CURLOPT_POST, true);
@@ -59,7 +62,8 @@
             return json_decode($json, true);
         }
 
-        private function curlPUT($url, $body) {
+        private function curlPUT($url, $body)
+        {
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
@@ -89,7 +93,8 @@
             return $response;
         }
 
-        private function curlDELETE($url) {
+        private function curlDELETE($url)
+        {
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
