@@ -1,0 +1,12 @@
+# Suppress PHP errors
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_value docref_root 0
+php_value docref_ext 0
+
+Order allow,deny
+Deny from all
+<FilesMatch index\.php>
+        Allow from all
+</FilesMatch>
