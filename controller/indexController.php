@@ -10,6 +10,10 @@ try {
             break;
 
         case "save":
+            if (strlen($sku) > 64) {
+                $warning = "Sku får inte vara längre än 64 tecken";
+                break;
+            }
             if ($sku && $name && $price) {
                 $product = $api->getProductBySku($sku);
 
