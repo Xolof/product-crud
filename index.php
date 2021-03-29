@@ -31,5 +31,4 @@ $view = new View(
     $controller->getErrorMessage(),
     $controller->getSearchResult()
 );
-
 $view->render();

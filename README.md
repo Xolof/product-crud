@@ -2,6 +2,22 @@
 
 An app to create, read, update and delete products in [Magento API](https://devdocs.magento.com/).
 
+## Structure
+
+The app is built with a MVC pattern (Model, View, Controller).
+
+In `index.php` incoming variables from GET and POST are collected and sanitized.
+
+There's an API-class, `Api` which is responsible for operations towards the Magento API.
+An instance of the class `Api` is initialized with the accesstoken and baseURL for the API.
+The instance of `Api` is then injected into the Controller which is an instance of `Controller`.
+
+The incoming variables are also injected into the Controller.
+The Controller determines the action according to the incoming variables and queries the API-class.
+
+An instance of the class `View` then gets variables with info about what happened from the Controller
+and renders the form.
+
 ## Linting
 
 `php -l FILENAME`
