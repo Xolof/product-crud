@@ -21,10 +21,6 @@
 
             $json = curl_exec($curl);
 
-            if ($json === false) {
-                throw new Exception(curl_error($curl), curl_errno($curl));
-            }
-
             curl_close($curl);
 
             if(curl_errno($curl)){
