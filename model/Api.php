@@ -25,7 +25,7 @@
 
             curl_close($curl);
 
-            if(curl_errno($curl)){
+            if (curl_errno($curl)) {
                 throw new Exception(curl_error($curl));
             }
 
@@ -55,7 +55,7 @@
 
             curl_close($curl);
 
-            if(curl_errno($curl)){
+            if (curl_errno($curl)) {
                 throw new Exception(curl_error($curl));
             }
 
@@ -86,7 +86,7 @@
 
             curl_close($curl);
 
-            if(curl_errno($curl)){
+            if (curl_errno($curl)) {
                 throw new Exception(curl_error($curl));
             }
 
@@ -115,7 +115,7 @@
 
             curl_close($curl);
 
-            if(curl_errno($curl)){
+            if (curl_errno($curl)) {
                 throw new Exception(curl_error($curl));
             }
 

@@ -6,6 +6,10 @@ An app to create, read, update and delete products in [Magento API](https://devd
 
 `php -l FILENAME`
 
+## Fix Coding Standards
+
+`tools/php-cs-fixer/vendor/bin/php-cs-fixer fix .`
+
 ## Setup
 
 Make a directory `config` above the document root.

@@ -19,8 +19,7 @@
             $warning,
             $errorMessage,
             $searchResult
-        )
-        {
+        ) {
             $this->sku = $sku;
             $this->name = $name;
             $this->price = $price;

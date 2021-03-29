@@ -32,7 +32,7 @@
         private function determineAction()
         {
             try {
-                switch($this->action) {
+                switch ($this->action) {
                     case "search":
                         $this->searchAction();
                         break;
